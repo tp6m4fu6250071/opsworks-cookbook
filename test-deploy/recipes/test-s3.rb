@@ -1,11 +1,8 @@
 require 'aws-sdk'
 
-s3 = AWS::S3.new
+Chef::Log.info("********** HelloWorld123 **********")
 
-log 'message' do
-  message 'HelloWorld123'
-  level :info
-end
+s3 = AWS::S3.new
 
 # Set bucket and object name
 obj = s3.buckets['test-opsworks-s3-role-appbucket-h74iqpaoyoru'].objects['object.txt']
